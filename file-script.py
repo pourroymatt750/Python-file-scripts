@@ -1,21 +1,12 @@
-
-Matthew Pourroy
-4:38 PM (0 minutes ago)
-to me
-
 # import OS module
-
 import os
-
 import string
-
 import re
 
  
 
-# Get the list of all files and directories
-
-path = "C:\\xampp\downloads\\htdocs\\bayview-condo-json\\drawings\\structural"
+# Get the list of all files and directories. Exact file path removed for security purposes.
+path = "C:\\xampp\downloads\\htdocs\\..."
 
 dir_list = os.listdir(path)
 
@@ -47,8 +38,9 @@ for old in dir_list:
 
     new = re.sub('[" "]', '-', old)
 
-    old_file = f"C:\\xampp\\downloads\\htdocs\\bayview-condo-json\\drawings\\structural\\{old}"
+    # Exact file path removed for security purposes.
+    old_file = f"C:\\xampp\\downloads\\htdocs\\...{old}"
 
-    new_file = f"C:\\xampp\\downloads\\htdocs\\bayview-condo-json\\drawings\\structural\\{new}"
+    new_file = f"C:\\xampp\\downloads\\htdocs\\..{new}"
 
     os.rename(old_file, new_file)
